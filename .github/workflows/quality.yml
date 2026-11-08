@@ -16,6 +16,6 @@ jobs:
         with:
           node-version: '22'
       - name: Check JavaScript syntax
-        run: node --check assets/app.js && node --check tests/smoke.test.cjs
+        run: node --check assets/app.js && node --check tests/smoke.test.cjs && node --check tests/behavior.test.cjs
       - name: Run smoke tests
-        run: node --test tests/smoke.test.cjs
+        run: node --test tests/smoke.test.cjs tests/behavior.test.cjs
